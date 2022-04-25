@@ -1,7 +1,13 @@
 <template>
 <div class=all>
   <header class="header">
-    <h1>re:start</h1>
+    <NuxtLink
+    to=""
+    tag="div">
+      <h1 class="sakae-home">
+        栄東祭
+      </h1>
+    </NuxtLink>
     <NuxtLink
     to="about"
     tag="div"
@@ -16,7 +22,6 @@
     </NuxtLink>
   </header>
   <div class="main">
-    <img src='~@/static/sky.jpg' class="home">
     <div class="titleWrapper">
     <h1 class="title">
       -開催要項-
@@ -49,20 +54,30 @@ export default {
     width: 100%;
   }
   .header{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(6, 12, 34, 0.8);
     position: fixed;
     top: 0px;
     width: 100%;
     height: 90px;
-    z-index: 5;
+    transition: all 0.5s;
+    z-index: 997;
+  }
+  .sakae-home{
+    cursor: pointer;
+    cursor: hand;
+    color: rgb(255, 255, 255);
+    font-size: 8vh;
+    position: absolute;
+    top: -5vh;
+    left: 3vh;
   }
   .about-button{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 40px;
     position: absolute;
     display: inline-block;
     text-decoration: none;
-    top: 30px;
+    top: 4.3vh;
     left: 800px;
     cursor: pointer;
     cursor: hand;
@@ -74,7 +89,7 @@ export default {
     content: '';
     width: 100%;
     height: 2px;
-    background: #333;
+    background: rgb(255, 255, 255);
     opacity: 0;
     visibility: hidden;
     transition: .3s;
@@ -85,12 +100,12 @@ export default {
     visibility: visible;
   }
   .news-button{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 40px;
     position: absolute;
     display: inline-block;
     text-decoration: none;
-    top: 30px;
+    top: 4.3vh;
     left: 950px;
     cursor: pointer;
     cursor: hand;
@@ -102,7 +117,7 @@ export default {
     content: '';
     width: 100%;
     height: 2px;
-    background: #333;
+    background: rgb(255, 255, 255);
     opacity: 0;
     visibility: hidden;
     transition: .3s;
@@ -113,14 +128,20 @@ export default {
     visibility: visible;
   }
   .main{
-     position: relative;
-  }
-  .home{
+    position: absolute;
+    background: url(~@/static/sky.jpg) top center;
     width: 100%;
-    height: 100%;
-    position: relative;
-    opacity: 0;
-    z-index: 0;
+    height: 100vh;
+    background-size: cover;
+  }
+  .main::before{
+    content: "";
+    background: rgba(6, 12, 34, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   .titleWrapper {
     text-align: center;
