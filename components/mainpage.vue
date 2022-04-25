@@ -12,13 +12,13 @@
     to="about"
     tag="div"
     class="about-button">
-      about
+      About
     </NuxtLink>
     <NuxtLink
     to="news"
     tag="div"
     class="news-button">
-      news
+      News
     </NuxtLink>
   </header>
   <div class="main">
@@ -59,20 +59,20 @@ export default {
     top: 0px;
     width: 100%;
     height: 90px;
-    transition: all 0.5s;
     z-index: 997;
   }
   .sakae-home{
     cursor: pointer;
     cursor: hand;
     color: rgb(255, 255, 255);
-    font-size: 8vh;
+    font-size: 6.8vh;
     position: absolute;
-    top: -5vh;
+    top: -4.3vh;
     left: 3vh;
   }
   .about-button{
     color: rgb(255, 255, 255);
+    opacity: .5;
     font-size: 40px;
     position: absolute;
     display: inline-block;
@@ -80,7 +80,6 @@ export default {
     top: 4.3vh;
     left: 800px;
     cursor: pointer;
-    cursor: hand;
   }
   .about-button::after {
     position: absolute;
@@ -91,16 +90,17 @@ export default {
     height: 2px;
     background: rgb(255, 255, 255);
     opacity: 0;
-    visibility: hidden;
     transition: .3s;
+  }
+  .about-button:hover {
+    opacity: 1;
   }
   .about-button:hover::after {
     bottom: 5px;
     opacity: 1;
-    visibility: visible;
   }
   .news-button{
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 40px;
     position: absolute;
     display: inline-block;
@@ -108,7 +108,6 @@ export default {
     top: 4.3vh;
     left: 950px;
     cursor: pointer;
-    cursor: hand;
   }
   .news-button::after {
     position: absolute;
