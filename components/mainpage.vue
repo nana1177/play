@@ -25,7 +25,7 @@
     <div class="titleWrapper">
     <h1 class="title">
       栄東中学・高等学校<br>
-      <color>栄東祭開催決定！</color>
+      <span class="color">栄東祭開催決定！</span>
     </h1>
     </div>
     <p class="text">
@@ -162,6 +162,9 @@ export default {
     text-align: center;
     letter-spacing: 0.01em;
     line-height: 1.3;
+  }
+  .color{
+    color: #fd8caa;
   }
   .under{
   width: 3vh;
