@@ -29,6 +29,7 @@
     </h1>
     </div>
     <img src="@/static/blank.png" class="poster">
+    <img src="@/static/logo.png" class="fes-logo">
     <div class="under">
     </div>
     <div class="detail">
@@ -140,7 +141,7 @@ export default {
   }
   .main{
     position: fixed;
-    background: url(~@/static/sky.jpg) top center;
+    background: url(~@/static/school.jpg) top center;
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -212,5 +213,11 @@ export default {
     top: 119vh;
     left: 97vh;
     position: absolute;
+  }
+  .fes-logo{
+    width: 30vh;
+    position: absolute;
+    top: 170vh;
+    left: 80vh;
   }
 </style>
