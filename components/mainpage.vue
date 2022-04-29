@@ -28,10 +28,15 @@
       <span class="color">栄東祭開催決定！</span>
     </h1>
     </div>
-    <p class="text">
-
-    </p>
+    <img src="@/static/blank.png" class="poster">
     <div class="under">
+    </div>
+    <div class="detail">
+      <p class="time">
+        開催日時
+      </p>
+    </div>
+    <div class="line">
     </div>
   </div>
 </div>
@@ -104,6 +109,7 @@ export default {
   }
   .news-button{
     color: rgba(255, 255, 255, 0.8);
+    opacity: .5;
     font-size: 40px;
     position: absolute;
     display: inline-block;
@@ -124,23 +130,27 @@ export default {
     visibility: hidden;
     transition: .3s;
   }
+  .news-button:hover{
+    opacity: 1;
+  }
   .news-button:hover::after {
     bottom: 5px;
     opacity: 1;
     visibility: visible;
   }
   .main{
-    position: absolute;
+    position: fixed;
     background: url(~@/static/sky.jpg) top center;
     width: 100%;
     height: 100vh;
     background-size: cover;
     z-index: -10;
+    overflow: scroll;
   }
   .main::before{
     content: "";
     background: rgba(6, 12, 34, 0.8);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     top: 0;
     left: 0;
@@ -179,5 +189,28 @@ export default {
   margin: auto;
   text-align: center;
   top: 90vh;
+  }
+  .poster{
+    position: absolute;
+    top: 103vh;
+    left: 23vh;
+    height: 80%;
+    z-index: 15;
+  }
+  .time{
+    font-size: 8.3vh;
+    position: absolute;
+    z-index: 15;
+    color: white;
+    top: 97vh;
+    left: 100vh;
+    font-weight: 600;
+  }
+  .line{
+    border-left: thick solid rgb(255, 255, 255);
+    height: 50vh;
+    top: 119vh;
+    left: 97vh;
+    position: absolute;
   }
 </style>
