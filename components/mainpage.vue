@@ -8,21 +8,29 @@
     </h1>
     </div>
     <div id="target">
-    <img src="@/static/logo.png" class="fes-logo">
     <div class="under" @click="under">
     </div>
-    <div clas="cover">
+    <div class="cover">
       <div class="detail">
-        <p class="time">
+        <h2 class="time">
           開催日
-        </p>
-        <p class="time-detail">
-          ９月１７日<span class="saturday">土</span>・１８日<span class="sunday">日</span>
-        </p>
-        <p class="caution">
-          本年度は、オフラインで校内にて一般公開する予定ではありますが、今後の状況によりやむを得ず変更する場合もあります。
-        </p>
-        <div class="line"></div>
+        </h2>
+        <div class="cover-in">
+          <p class="time-detail">
+            9<span class="small">月</span>17<span class="small">日</span><span class="saturday small">(土)</span>･18<span class="small">日</span><span class="sunday small">(日)</span>
+          </p>
+          <p class="caution">
+            本年度は、オフラインで校内にて一般公開する予定ではありますが、今後の状況によりやむを得ず変更する場合もあります。
+          </p>
+        </div>
+        <div class="logo">
+          <h2 class="logo-detail">
+            ロゴ
+          </h2>
+          <div class="cover-in-logo">
+            <img src="@/static/logo.png" class="logo-img">
+          </div>
+        </div>
       </div>
     </div>
     </div>
@@ -81,15 +89,12 @@ export default {
   }
   .titleWrapper {
     text-align: center;
+    margin: calc(40vh - (min(8vh, 8vw) / 2)) 0;
   }
   .title{
     z-index: 7;
     color: white;
     font-size: min(8vh, 8vw);
-    position: absolute;
-    top: 35vh;
-    left: 0;
-    right: 0;
     margin: auto;
     text-align: center;
     letter-spacing: 0.01em;
@@ -105,58 +110,51 @@ export default {
   border-color:  transparent transparent #ffffff #ffffff;
   transform: rotate(-45deg);
   z-index: 7;
-  position: absolute;
-  left: 0;
-  right: 0;
   margin: auto;
   text-align: center;
-  top: 90vh;
-  cursor: pointer;
-  }
-  .cover{
-    text-align: center;
   }
   .detail{
-    width: min(100%,750px);
+    width: min(95%,1000px);
+    margin: 0 auto;
+  }
+  .cover-in{
+    border-left: 3px solid white;
+    padding: 1rem;
   }
   .time{
-    font-size: 8.3vh;
-    position: absolute;
+    font-size: min(7vh,7vw);
     z-index: 15;
     color: white;
-    top: 97vh;
     font-weight: 600;
   }
-  .line{
-    border-left: thick solid rgb(255, 255, 255);
-    height: 50vh;
-    top: 119vh;
-    position: absolute;
-  }
-  .fes-logo{
-    width: 30vh;
-    position: absolute;
-    top: 170vh;
-    left: 80vh;
-  }
   .time-detail{
-    font-size: 5vh;
+    font-size: min(7vh,7vw);
     color: white;
-    position: absolute;
-    top: 120vh;
+    margin: 1rem 0;
+    font-weight: 600;
+    letter-spacing: .2rem;
+  }
+  .small{
+    font-size: min(4vh,4vw);
   }
   .saturday{
-    font-size: 3vh;
     color: rgb(0, 98, 255);
   }
   .sunday{
-    font-size: 3vh;
-    color: rgb(255, 0, 0);
+    color: #E91E63;
   }
   .caution{
     color: white;
-    font-size: 4vh;
-    position: absolute;
-    top: 138vh;
+    font-size: min(4vh,4vw);
+  }
+  .logo-detail{
+    font-size: min(7vh,7vw);
+    color: white;
+  }
+  .cover-in-logo{
+    text-align: center;
+  }
+  .logo-img{
+    width: 60vh;
   }
 </style>
