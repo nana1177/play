@@ -7,19 +7,24 @@
       <span class="color">栄東祭開催決定！</span>
     </h1>
     </div>
-    <img src="@/static/blank.png" class="poster">
+    <div id="target">
     <img src="@/static/logo.png" class="fes-logo">
-    <div class="under">
+    <div class="under" @click="under">
     </div>
-    <div class="detail">
-      <p class="time">
-        開催日時
-      </p>
-      <p class="time-detail">
-        ９月１７日（土曜日）・１８日（日曜日）
-      </p>
+    <div clas="cover">
+      <div class="detail">
+        <p class="time">
+          開催日
+        </p>
+        <p class="time-detail">
+          ９月１７日<span class="saturday">土</span>・１８日<span class="sunday">日</span>
+        </p>
+        <p class="caution">
+          本年度は、オフラインで校内にて一般公開する予定ではありますが、今後の状況によりやむを得ず変更する場合もあります。
+        </p>
+        <div class="line"></div>
+      </div>
     </div>
-    <div class="line">
     </div>
   </div>
 </div>
@@ -34,6 +39,14 @@ export default {
       duration: 2,
       opacity: 1
   })
+  },
+  methods: {
+    under(){
+      window.scrollTo({
+        top: 100,
+        behavior: 'smooth'
+      });
+    }
   }
 }
 </script>
@@ -72,7 +85,7 @@ export default {
   .title{
     z-index: 7;
     color: white;
-    font-size: 3.4vw;
+    font-size: min(8vh, 8vw);
     position: absolute;
     top: 35vh;
     left: 0;
@@ -98,13 +111,13 @@ export default {
   margin: auto;
   text-align: center;
   top: 90vh;
+  cursor: pointer;
   }
-  .poster{
-    position: absolute;
-    top: 103vh;
-    left: 23vh;
-    height: 80%;
-    z-index: 15;
+  .cover{
+    text-align: center;
+  }
+  .detail{
+    width: min(100%,750px);
   }
   .time{
     font-size: 8.3vh;
@@ -112,14 +125,12 @@ export default {
     z-index: 15;
     color: white;
     top: 97vh;
-    left: 100vh;
     font-weight: 600;
   }
   .line{
     border-left: thick solid rgb(255, 255, 255);
     height: 50vh;
     top: 119vh;
-    left: 97vh;
     position: absolute;
   }
   .fes-logo{
@@ -129,6 +140,23 @@ export default {
     left: 80vh;
   }
   .time-detail{
-    width: 
+    font-size: 5vh;
+    color: white;
+    position: absolute;
+    top: 120vh;
+  }
+  .saturday{
+    font-size: 3vh;
+    color: rgb(0, 98, 255);
+  }
+  .sunday{
+    font-size: 3vh;
+    color: rgb(255, 0, 0);
+  }
+  .caution{
+    color: white;
+    font-size: 4vh;
+    position: absolute;
+    top: 138vh;
   }
 </style>
