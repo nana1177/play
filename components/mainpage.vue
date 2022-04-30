@@ -77,6 +77,7 @@ export default {
   .main::before{
     content: "";
     background: rgba(6, 12, 34, 0.8);
+    opacity: .7;
     position: fixed;
     bottom: 0;
     top: 0;
@@ -155,6 +156,6 @@ export default {
     text-align: center;
   }
   .logo-img{
-    width: 60vh;
+    width: min(60vh, 90vw);
   }
 </style>
